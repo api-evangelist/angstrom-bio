@@ -1,23 +1,100 @@
 aid: angstrom-bio
+
 name: Angstrom Bio
-description: 'Angstrom Bio is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: Angstrom Bio is a biotechnology company focused on machine intelligence for human health, leveraging amplicon sequencing and machine learning to develop diagnostic solutions. Their goal is to maximize the reach of amplicon sequencing diagnostics to save, prolong, and improve human lives. The company operates from 2020-2026 and provides research, news, and privacy policy information on their website. Angstrom Bio aims to revolutionize diagnostics by integrating advanced sequencing technologies with AI-driven analysis, delivering scalable, accurate, and affordable tests for a wide range of diseases, ultimately enhancing patient outcomes worldwide.
+
 url: https://raw.githubusercontent.com/api-evangelist/angstrom-bio/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
 - Company
-apis: []
+- Biotechnology
+- Diagnostics
+- Machine Learning
+- Sequencing
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/angstrom-bio-hosts.yml
+- type: Vendors
+  url: vendors/angstrom-bio-vendors.yml
+- type: PrivacyPolicy
+  url: https://www.angstrombio.com/privacy-policy.html
+- type: DomainSecurity
+  url: security/angstrom-bio-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.angstrombio.com
+- type: Documentation
+  url: https://www.angstrombio.com/documentation
+  method: none
+- type: APIReference
+  url: https://api.angstrombio.com
+  method: none
+- type: GettingStarted
+  url: https://www.angstrombio.com/getting-started
+  method: none
+- type: Support
+  url: https://www.angstrombio.com/support
+  method: none
+- type: Blog
+  url: https://www.angstrombio.com/blog
+  method: none
+- type: Roadmap
+  url: https://www.angstrombio.com/roadmap
+  method: none
+- type: Pricing
+  url: https://www.angstrombio.com/pricing
+  method: none
+- type: SignUp
+  url: https://www.angstrombio.com/signup
+  method: none
+- type: TermsOfService
+  url: https://www.angstrombio.com/terms-of-service
+  method: none
+
+apis:
+- name: Angstrom Bio API
+  description: API for Angstrom Bio services (no public machine‑readable specification found)
+  humanURL: https://www.angstrombio.com
+  x-coverage:
+    state: unreadable
+    reason: no-machine-readable-spec
+    detail: No OpenAPI/AsyncAPI/GraphQL spec could be retrieved from the known API host.
+    evidence:
+    - url: https://api.angstrombio.com/openapi.json
+      status: 0
+    checked: 2026-09-25
+  aid: angstrom-bio:angstrom-bio-api
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-24'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company publishes no developer documentation host and no machine-readable contract on its own domain
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
